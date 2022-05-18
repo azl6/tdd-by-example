@@ -19,6 +19,7 @@ public class MoneyTest {
     void testEqualityDollar() {
         Assertions.assertEquals(new Dollar(5), new Dollar(5));
         Assertions.assertNotEquals(new Dollar(5), new Dollar(8));
+        Assertions.assertNotEquals(new Dollar(5), new Franc(5));
     }
 
     @Test
@@ -32,5 +33,6 @@ public class MoneyTest {
     void testEqualityFranc() {
         Assertions.assertEquals(new Franc(5), new Franc(5));
         Assertions.assertNotEquals(new Franc(5), new Franc(8));
+        Assertions.assertNotEquals(new Dollar(5), new Franc(5));
     }
 }
